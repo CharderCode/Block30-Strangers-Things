@@ -5,6 +5,7 @@ import Profile from "./pages/Profile"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import NavBar from "./components/NavBar"
+import './App.css'
 
 //app
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <div>
       <NavBar />
       <Routes>
+        <Route path="/" element={<Login setToken={setToken} />} />
         <Route path="/posts" element={<Posts token={token} />} />
         <Route path="/profile" element={<Profile token={token} />} />
         <Route path="/login" element={<Login setToken={setToken} />} />
